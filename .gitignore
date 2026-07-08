@@ -1,0 +1,20 @@
+# Python
+.venv/
+__pycache__/
+*.pyc
+
+# Database
+medical_reports.db
+*.db
+
+# Uploads
+uploads/
+
+# Environment
+.env
+
+# VS Code
+.vscode/
+
+# Node
+node_modules/
