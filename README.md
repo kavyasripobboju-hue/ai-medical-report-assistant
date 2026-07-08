@@ -1,5 +1,12 @@
 # 🏥 AI Medical Report Assistant using FastAPI, React & Gemini AI
 
+![Python](https://img.shields.io/badge/Python-3.14-blue)
+![FastAPI](https://img.shields.io/badge/FastAPI-Backend-green)
+![React](https://img.shields.io/badge/React-Frontend-blue)
+![Gemini](https://img.shields.io/badge/Google-Gemini-orange)
+![JWT](https://img.shields.io/badge/Auth-JWT-red)
+![SQLite](https://img.shields.io/badge/Database-SQLite-lightgrey)
+
 An AI-powered web application that enables users to securely upload medical reports in PDF format and receive AI-generated explanations using Google's Gemini AI.
 
 **The application implements user authentication with JWT, PDF text extraction, AI-powered report analysis, secure report management, and a responsive React frontend integrated with a FastAPI backend.**
