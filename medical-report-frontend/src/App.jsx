@@ -23,12 +23,14 @@ function App() {
   const registerUser = async () => {
     try {
       const response = await axios.post(
-        "https://medical-report-assistant-zt6g.onrender.com/register",
+        "https://ai-medical-report-assistant.onrender.com/register",
+
         {
           name: name,
           email: email,
           password: password,
         }
+        
       );
 
       alert(response.data.message);
@@ -50,14 +52,19 @@ function App() {
   const loginUser = async () => {
     try {
       const response = await axios.post(
-        "https://medical-report-assistant-zt6g.onrender.com/login",
-        {
-          email: email,
-          password: password,
-        }
-      );
+  "https://ai-medical-report-assistant.onrender.com/login",
+  {
+    email: email,
+    password: password,
+  }
+);
 
-      localStorage.setItem(
+console.log("FULL RESPONSE:", response);
+console.log("FULL RESPONSE DATA:", response.data);
+
+alert(JSON.stringify(response.data));
+
+localStorage.setItem(
   "token",
   response.data.access_token
 );
@@ -96,7 +103,7 @@ alert("Login Successful");
 console.log("Authorization Header:", `Bearer ${token}`);
 
       const response = await axios.post(
-        "https://medical-report-assistant-zt6g.onrender.com/upload-report",
+        "https://ai-medical-report-assistant.onrender.com/upload-report",
         formData,
         {
           headers: {
@@ -128,7 +135,7 @@ console.log("Authorization Header:", `Bearer ${token}`);
       const token = localStorage.getItem("token");
 
       const response = await axios.get(
-        "https://medical-report-assistant-zt6g.onrender.com/my-reports",
+        "https://ai-medical-report-assistant.onrender.com/my-reports",
         {
           headers: {
             Authorization: `Bearer ${token}`,
